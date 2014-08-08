@@ -1,12 +1,11 @@
 # Write a program that takes a user-entered list of states and prints them to the screen
 # Hint: Use an array
+visited = []
 
 puts "Where Have You Been?"
 
-visited = []
 puts "Enter all the states you've been to! Type 'done' when you're finished:"
 keep_going = true
-
 
 while keep_going
 
@@ -20,8 +19,11 @@ while keep_going
     end
 end
 
-puts "#{visited}"
+puts "You have visited:"
 
+visited.each do |state|
+  puts state 
+end
 
 if visited.length == 1
     puts "You've been to one state."
